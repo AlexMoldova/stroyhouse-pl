@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StroyHouse — schody od producenta w Warszawie i okolicach</title>
+  <meta name="description" content="Produkcja i montaż schodów od ponad 30 lat. Własna produkcja, doświadczeni inżynierowie, gwarancja 3 lata.">
+  <meta property="og:title" content="StroyHouse — schody od producenta w Warszawie i okolicach">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://46.225.63.145:8088/pl/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#home" class="logo">
+      <img src="assets/logo.png" alt="STROYHOUSE" class="logo-img">
+      <span class="logo-text">STROY <span class="logo-accent">HOUSE</span></span>
+    </a>
+    <div class="header-contact">
+      <span class="header-hours">Od poniedziałku do piątku 8:00 - 20:00</span>
+      <a href="tel:+48500123456" class="header-phone">
+        <img src="assets/phone-icon.svg" alt="" class="phone-icon">
+        <span>+48 500 123 456</span>
+      </a>
+    </div>
+    <button class="btn btn-callback" onclick="openPopup('callback')">Oddzwoń do mnie</button>
+    <button class="burger" id="burger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-link" onclick="closeNav()">Schody</a>
+    <a href="#quiz" class="nav-link" onclick="closeNav()">Obliczyć koszt</a>
+    <a href="#features" class="nav-link" onclick="closeNav()">Zalety</a>
+    <a href="#works" class="nav-link" onclick="closeNav()">Zrealizowane prace</a>
+    <a href="#process" class="nav-link" onclick="closeNav()">Etapy prac</a>
+    <a href="#testimonials" class="nav-link" onclick="closeNav()">Opinie</a>
+    <a href="#contact" class="nav-link" onclick="closeNav()">Kontakt</a>
+  </div>
+</nav>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-container">
+    <div class="hero-line"></div>
+    <p class="hero-subtitle">Zajmujemy się produkcją i montażem schodów od ponad 30 lat</p>
+    <h1 class="hero-title">WYBIERZ SCHODY DLA SWOJEGO DOMU</h1>
+    <p class="hero-desc">Po wyborze schodów otrzymasz kosztorys naprawy i kosztów materiałów</p>
+    <div class="hero-buttons">
+      <a href="#quiz" class="btn btn-gold">Obliczyć koszt schodów</a>
+      <a href="#stairs-types" class="btn btn-outline-gold">Zobacz ceny</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat-box">
+        <img src="assets/stat-stairs.png" alt="" class="hero-stat-icon">
+        <span class="hero-stat-num">30+</span>
+        <span class="hero-stat-label">Wykwalifikowani inżynierowie</span>
+      </div>
+      <div class="hero-stat-box">
+        <img src="assets/stat-gear.png" alt="" class="hero-stat-icon">
+        <span class="hero-stat-num">1995</span>
+        <span class="hero-stat-label">Własna produkcja</span>
+      </div>
+      <div class="hero-stat-box">
+        <img src="assets/stat-factory.png" alt="" class="hero-stat-icon">
+        <span class="hero-stat-num">Ponad 2500</span>
+        <span class="hero-stat-label">gotowych obiektów</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ QUIZ / CALCULATOR ═══════════════ -->
+<section class="quiz" id="quiz">
+  <div class="container">
+    <h2 class="quiz-title">🪜 UZYSKAJ WYCENĘ<br>SWOICH SCHODÓW</h2>
+    <p class="quiz-subtitle">Odpowiedz na kilka pytań — a przygotujemy dla Ciebie wstępny kosztorys</p>
+    
+    <div class="quiz-container">
+      <div class="quiz-step">
+        <h3 class="quiz-step-title">🔹 Krok 1. Czego dokładnie potrzebujesz?</h3>
+        <div class="quiz-options">
+          <label class="quiz-option">
+            <input type="radio" name="step1" value="Obłożenie gotowego metalowego lub betonowego szkieletu drewnem">
+            <span class="quiz-option-text">🧱 Obłożenie gotowego metalowego lub betonowego szkieletu drewnem</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step1" value="Wykonanie metalowego szkieletu schodów">
+            <span class="quiz-option-text">🏗️ Wykonanie metalowego szkieletu schodów</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step1" value="Schody w pełni drewniane">
+            <span class="quiz-option-text">🪵 Schody w pełni drewniane</span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="quiz-step">
+        <h3 class="quiz-step-title">🔹 Krok 2. Jaki kształt schodów jest planowany?</h3>
+        <div class="quiz-options">
+          <label class="quiz-option">
+            <input type="radio" name="step2" value="Proste, bez zakrętów">
+            <span class="quiz-option-text">▭ Proste, bez zakrętów</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step2" value="W kształcie L">
+            <span class="quiz-option-text">↱ W kształcie L</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step2" value="W kształcie U">
+            <span class="quiz-option-text">⧉ W kształcie U</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step2" value="Schody kręcone">
+            <span class="quiz-option-text">🌀 Schody kręcone</span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="quiz-step">
+        <h3 class="quiz-step-title">🔹 Krok 3. Jakie drewno rozważasz?</h3>
+        <div class="quiz-options">
+          <label class="quiz-option">
+            <input type="radio" name="step3" value="Sosna (ekonomiczne)">
+            <span class="quiz-option-text">🌲 Sosna (ekonomiczne)</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step3" value="Jesion (optymalny wybór)">
+            <span class="quiz-option-text">🌳 Jesion (optymalny wybór)</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step3" value="Deska inżynieryjna laminowana dębem (optymalny wybór)">
+            <span class="quiz-option-text">🪵 Deska inżynieryjna laminowana dębem (optymalny wybór)</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step3" value="Dąb (premium)">
+            <span class="quiz-option-text">🌰 Dąb (premium)</span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="quiz-step">
+        <h3 class="quiz-step-title">🔹 Krok 4. Jaki styl schodów Ci odpowiada?</h3>
+        <div class="quiz-options">
+          <label class="quiz-option">
+            <input type="radio" name="step4" value="Otwarte (bez stopni pionowych)">
+            <span class="quiz-option-text">◻️ Otwarte (bez stopni pionowych)</span>
+          </label>
+          <label class="quiz-option">
+            <input type="radio" name="step4" value="Zamknięte (z podstopnicami)">
+            <span class="quiz-option-text">◼️ Zamknięte (z podstopnicami)</span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="quiz-form">
+        <input type="text" placeholder="Wpisz swoje imię" class="quiz-input" id="quiz-name">
+        <input type="tel" placeholder="Wpisz swój telefon" class="quiz-input" id="quiz-phone">
+        <button class="btn btn-gold btn-full" onclick="submitQuiz()">Otrzymać wycenę</button>
+        <p class="quiz-privacy">„Klikając przycisk, wyrażasz zgodę na przetwarzanie danych osobowych i akceptujesz politykę prywatności"</p>
+        <div class="quiz-success">Dane pomyślnie wysłane. Dziękujemy!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ STAIRS TYPES ═══════════════ -->
+<section class="section stairs-types" id="stairs-types">
+  <div class="container">
+    <div class="stairs-types-grid">
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type1.jpg" alt="Schody prosty bieg">
+        <div class="stairs-type-body">
+          <h3>Schody prosty bieg</h3>
+          <p class="stairs-price">Cena: <span>od 6 000 zł</span></p>
+          <p class="stairs-desc">Mimo prostoty nie do każdego domu pasuje taka konstrukcja. Wymaga długiego otworu</p>
+          <a href="#quiz" class="btn btn-gold btn-sm">Oceń moje schody</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type2.jpg" alt="Schody 90° z podestem">
+        <div class="stairs-type-body">
+          <h3>Schody 90° z podestem</h3>
+          <p class="stairs-price">Cena: <span>od 6 200 zł</span></p>
+          <p class="stairs-desc">Schody skrętne — najpopularniejsza konfiguracja</p>
+          <a href="#quiz" class="btn btn-gold btn-sm">Oceń moje schody</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type3.jpg" alt="Schody ze stopniami wachlarzowymi">
+        <div class="stairs-type-body">
+          <h3>Schody ze stopniami wachlarzowymi</h3>
+          <p class="stairs-price">Cena: <span>6 400 zł</span></p>
+          <p class="stairs-desc">Dla takich schodów wystarczy niewielki otwór</p>
+          <a href="#quiz" class="btn btn-gold btn-sm">Oceń moje schody</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type4.jpg" alt="Schody 180° ze stopniami wachlarzowymi">
+        <div class="stairs-type-body">
+          <h3>Schody 180° ze stopniami wachlarzowymi</h3>
+          <p class="stairs-price">Cena: <span>6 400 zł</span></p>
+          <p class="stairs-desc">Stopnie wachlarzowe sprawiają, że schody są wygodne i jednocześnie oszczędzają miejsce</p>
+          <a href="#quiz" class="btn btn-gold btn-sm">Oceń moje schody</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type5.jpg" alt="Schody reprezentacyjne">
+        <div class="stairs-type-body">
+          <h3>Schody reprezentacyjne</h3>
+          <p class="stairs-price">Cena: <span>7 700 zł</span></p>
+          <p class="stairs-desc">Takie schody staną się ozdobą każdego domu i zademonstrują wysoki status właściciela.</p>
+          <a href="#quiz" class="btn btn-gold btn-sm">Oceń moje schody</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type6.jpg" alt="Schody otwarte na metalowym szkieletcie">
+        <div class="stairs-type-body">
+          <h3>Schody otwarte na metalowym szkieletcie</h3>
+          <p class="stairs-price">Cena: <span>7 500 zł</span></p>
+          <p class="stairs-desc">Dla takich schodów wystarczy niewielki otwór</p>
+          <a href="#quiz" class="btn btn-gold btn-sm">Oceń moje schody</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SAFETY ═══════════════ -->
+<section class="section" id="about">
+  <div class="container">
+    <p class="section-subtitle" style="margin-bottom: 20px;">Zadbamy o Twoje bezpieczeństwo</p>
+    <h2 class="section-title" style="font-size: 22px; margin-bottom: 30px;">ZAMÓW SOLIDNE SCHODY DO SWOJEGO DOMU</h2>
+    <div class="safety-featured">
+      <div class="safety-featured-image">
+        <img src="assets/safety2.jpg" alt="">
+      </div>
+      <div class="safety-featured-body">
+        <h3>ZADBAMY O TWOJE BEZPIECZEŃSTWO</h3>
+        <div class="safety-points">
+          <div class="safety-point">
+            <span class="safety-check">✓</span>
+            <p>Wykonamy schody i balustrady, które idealnie wpasują się w Twoje wnętrze.</p>
+          </div>
+          <div class="safety-point">
+            <span class="safety-check">✓</span>
+            <p>Zamontujemy balustrady po obu stronach biegu schodów (w razie potrzeby).</p>
+          </div>
+          <div class="safety-point">
+            <span class="safety-check">✓</span>
+            <p>Zamontujemy bezpieczne balustrady schodowe.</p>
+          </div>
+          <div class="safety-point">
+            <span class="safety-check">✓</span>
+            <p>Sprawdź koszt schodów i balustrady do Twojego wnętrza.</p>
+          </div>
+        </div>
+        <a href="#quiz" class="btn btn-gold">Obliczyć koszt</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FEATURES ═══════════════ -->
+<section class="section section-darker" id="features">
+  <div class="container">
+    <div class="features-header">
+      <img src="assets/logo.png" alt="STROYHOUSE" class="features-logo">
+      <span class="features-logo-text">STROY <span class="logo-accent">HOUSE</span></span>
+      <h2 class="section-title features-title">ekspert w produkcji schodów od 1995 roku</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="assets/feature1.jpg" alt="">
+        <h3>WŁASNA PRODUKCJA</h3>
+        <p>Wszystkie elementy schodów i balustrad są produkowane we własnym zakładzie STROYHOUSE.</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/feature2.jpg" alt="">
+        <h3>SALON WYSTAWIENNICZY</h3>
+        <p>Posiadamy własny salon wystawienniczy z ekspozycją schodów drewnianych i metalowych.</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/feature3.jpg" alt="">
+        <h3>DOŚWIADCZENI INŻYNIEROWIE</h3>
+        <p>Projektowaniem schodów dla Twojego wnętrza zajmą się inżynierowie z ponad 20-letnim doświadczeniem.</p>
+      </div>
+      <div class="feature-card">
+        <img src="assets/feature4.jpg" alt="">
+        <h3>GWARANCJA 3 LATA</h3>
+        <p>Usuniemy usterkę na własny koszt w ciągu 36 miesięcy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WORKS ═══════════════ -->
+<section class="section" id="works">
+  <div class="container">
+    <h2 class="section-title">ZAPOZNAJ SIĘ Z PRZYKŁADAMI<br>WYKONANYCH SCHODÓW I BALUSTRAD</h2>
+    <div class="works-featured">
+      <div class="works-featured-image">
+        <img src="assets/work1.jpg" alt="">
+      </div>
+      <div class="works-featured-body">
+        <h3>MONTAŻ SCHODÓW KRĘCONYCH</h3>
+        <ul class="works-list">
+          <li>Zamontowaliśmy słup centralny, poręcze i spirale</li>
+          <li>Wokół metalowego pręta zamocowaliśmy klinowe stopnie 750 mm.</li>
+          <li>Następnie przymocowaliśmy stopnie do słupka poręczy.</li>
+          <li>Materiał stopni: <strong>jesion</strong>.</li>
+        </ul>
+        <span class="work-tag">Dom dwupoziomowy, woj. mazowieckie</span>
+      </div>
+    </div>
+    <div class="works-cta">
+      <a href="#contact" class="btn btn-outline-gold">ZOBACZ PRZYKŁADY NASZYCH PRAC NA ŻYWO</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PROCESS ═══════════════ -->
+<section class="section section-darker" id="process">
+  <div class="container">
+    <h2 class="section-title">ZAPEWNIAMY WSPARCIE NA KAŻDYM ETAPIE WSPÓŁPRACY</h2>
+    <div class="process-grid">
+      <div class="process-step">
+        <img src="assets/step1.jpg" alt="">
+        <div class="process-num">01</div>
+        <p>Pokażemy przykłady prac, opowiemy o produkcji StroyHouse.</p>
+      </div>
+      <div class="process-step">
+        <img src="assets/step2.jpg" alt="">
+        <div class="process-num">02</div>
+        <p>Tworzymy projekt geometryczny i zatwierdzamy go z Tobą. Przygotowujemy szczegółowe rysunki wszystkich elementów schodów.</p>
+      </div>
+      <div class="process-step">
+        <img src="assets/step3.jpg" alt="">
+        <div class="process-num">03</div>
+        <p>Inżynier przyjedzie na Twój obiekt, dokona pomiarów pomieszczenia i określi koszt wykonania schodów i balustrad.</p>
+      </div>
+      <div class="process-step">
+        <img src="assets/step4.jpg" alt="">
+        <div class="process-num">04</div>
+        <p>Wykonamy wszystkie elementy we własnej produkcji. Zamontujemy konstrukcję schodów w Twoim wnętrzu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SHOWCASE GALLERY ═══════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="showcase-grid">
+      <div class="showcase-item"><img src="assets/stairs5.jpg" alt=""></div>
+      <div class="showcase-item"><img src="assets/stairs6.jpg" alt=""></div>
+      <div class="showcase-item"><img src="assets/stairs2.jpg" alt=""></div>
+      <div class="showcase-item"><img src="assets/stairs1.jpg" alt=""></div>
+      <div class="showcase-item"><img src="assets/stairs3.jpg" alt=""></div>
+      <div class="showcase-item"><img src="assets/stairs4.jpg" alt=""></div>
+      <div class="showcase-item"><img src="assets/stairs7.jpg" alt=""></div>
+      <div class="showcase-item"><img src="assets/work4.jpg" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+<section class="section section-darker" id="testimonials">
+  <div class="container">
+    <h2 class="section-title">OTO CO MÓWIĄ<br>NASI KLIENCI</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>Nasza rodzina od dawna chciała przeprowadzić się do własnego przytulnego domu. Kupiliśmy dom naszych marzeń i od razu stanęliśmy przed koniecznością wymiany schodów na drugie piętro.</p>
+        <p>Znajomi polecili skontaktować się z StroyHouse. Następnego dnia po zgłoszeniu, inżynierowie firmy obejrzeli nasze schody i sporządzili kosztorys renowacji.</p>
+        <p>Teraz z żoną nie martwimy się o bezpieczeństwo naszych dzieci, których pokoje są na drugim piętrze. Dziękujemy StroyHouse za piękne i bezpieczne schody na wzdłużnikach!</p>
+        <div class="testimonial-author">
+          <img src="assets/comment1.jpg" alt="">
+          <div class="author-info">
+            <span class="author-name">Michał Kowalski</span>
+            <span class="author-city">Pruszków</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>Przez 2 lata budowaliśmy z mężem duży dom pod Warszawą. W trakcie budowy zdecydowaliśmy się zamówić schody samonośne. Podobne niedawno firma StroyHouse zamontowała w sąsiednim domu.</p>
+        <p>Na początku inżynierowie wykonali obliczenia i przygotowali wizualizację schodów. Na materiał wybraliśmy jesion. Bardzo nam się spodobało, jak dobrze schody wkomponowały się we wnętrze.</p>
+        <p>Dziękujemy firmie StroyHouse i liczymy na dalszą współpracę!</p>
+        <div class="testimonial-author">
+          <img src="assets/comment2.jpg" alt="">
+          <div class="author-info">
+            <span class="author-name">Weronika Nowak</span>
+            <span class="author-city">Piaseczno</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p>Gdy stanęło pytanie montażu schodów, spędziłem dużo czasu na studiowaniu informacji i rozmowach z różnymi firmami.</p>
+        <p>Kiedy zadzwoniłem do StroyHouse, od razu zrozumiałem, że znają się na schodach. Schody to droga rzecz i każdy szczegół był dla mnie ważny.</p>
+        <p>Ostatecznie zdecydowaliśmy nie oszczędzać na schodach i słusznie. Po trzech latach schody jak nowe!</p>
+        <div class="testimonial-author">
+          <img src="assets/comment3.jpg" alt="">
+          <div class="author-info">
+            <span class="author-name">Tomasz Wiśniewski</span>
+            <span class="author-city">Wilanów</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>SKONSULTUJ SIĘ Z INŻYNIEREM STROYHOUSE</h2>
+        <p>Odpowiemy na wszystkie Twoje pytania i omówimy:</p>
+        <ul class="contact-list">
+          <li>Koszt produkcji schodów do Twojego domu</li>
+          <li>Materiały, terminy produkcji balustrad</li>
+          <li>Technologię produkcji schodów</li>
+        </ul>
+        <div class="contact-showcase">
+          <img src="assets/showcase2.jpg" alt="">
+          <img src="assets/showcase3.jpg" alt="">
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="return false;">
+        <div class="form-group">
+          <input type="text" placeholder="Twoje imię" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Wpisz swój telefon" required>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Twoja wiadomość" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold btn-full">Skonsultować się</button>
+        <p class="form-privacy">Klikając przycisk, wyrażasz zgodę na przetwarzanie danych osobowych</p>
+        <div class="form-success">Dane pomyślnie wysłane. Dziękujemy!</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="assets/logo.png" alt="STROYHOUSE" class="footer-logo">
+          <span class="footer-logo-text">STROY <span class="logo-accent">HOUSE</span></span>
+        </div>
+        <p>Wykonanie schodów, balustrad i konstrukcji metalowych pod klucz w Warszawie i okolicach</p>
+      </div>
+      <div class="footer-col">
+        <a href="mailto:stroyhouse.polska@gmail.com" class="footer-email">stroyhouse.polska@gmail.com</a>
+        <a href="tel:+48500123456" class="footer-phone">+48 500 123 456</a>
+        <button class="btn btn-callback footer-callback" onclick="openPopup('callback')">Oddzwoń do mnie</button>
+        <p class="footer-legal">STROYHOUSE POLAND SP. Z O.O.</p>
+        <p class="footer-legal">NIP 1234567890</p>
+        <p class="footer-legal">Warszawa, ul. Wspólna 15</p>
+        <a href="#" class="footer-privacy-link">Polityka prywatności</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> STROYHOUSE. Wszelkie prawa zastrzeżone</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════ POPUP ═══════════════ -->
+<div class="popup-overlay" id="popup-overlay" onclick="closePopup(event)">
+  <div class="popup-box" onclick="event.stopPropagation()">
+    <button class="popup-close" onclick="closePopup()">✕</button>
+    <h3 class="popup-title">Zamów oddzwonienie</h3>
+    <p class="popup-subtitle">Oszczędź czas już teraz</p>
+    <a href="tel:+48500123456" class="popup-phone">+48 500 123 456</a>
+    <form class="popup-form" onsubmit="return false;">
+      <input type="text" placeholder="Twoje imię" class="popup-input" id="popup-name">
+      <input type="tel" placeholder="Twój telefon" class="popup-input" id="popup-phone-input">
+      <button class="btn btn-gold btn-full" onclick="submitPopup()">Oddzwoń do mnie</button>
+    </form>
+    <p class="popup-privacy">„Klikając przycisk, wyrażasz zgodę na przetwarzanie danych osobowych i akceptujesz politykę prywatności"</p>
+    <div class="popup-success">Dane pomyślnie wysłane. Dziękujemy!</div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
