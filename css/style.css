@@ -462,16 +462,16 @@ img { max-width: 100%; display: block; }
 .quiz-input {
   width: 100%;
   padding: 14px 16px;
-  background: #f5f5f5;
-  border: 1px solid #ddd;
+  background: var(--dark-3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
-  color: #333;
+  color: var(--white);
   font-size: 15px;
   font-family: var(--font);
 }
 
-.quiz-input::placeholder { color: #999; }
-.quiz-input:focus { outline: none; border-color: var(--gold); background: #fff; }
+.quiz-input::placeholder { color: rgba(255, 255, 255, 0.4); }
+.quiz-input:focus { outline: none; border-color: var(--gold); }
 
 .quiz-privacy {
   font-size: 11px;
@@ -788,7 +788,7 @@ img { max-width: 100%; display: block; }
 /* Gallery grid */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin: 40px 0;
 }
@@ -981,10 +981,10 @@ img { max-width: 100%; display: block; }
 .contact-form .form-group textarea {
   width: 100%;
   padding: 14px 16px;
-  background: #f5f5f5;
-  border: 1px solid #ddd;
+  background: var(--dark-3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
-  color: #333;
+  color: var(--white);
   font-size: 14px;
   font-family: var(--font);
   transition: 0.2s;
@@ -992,14 +992,13 @@ img { max-width: 100%; display: block; }
 
 .contact-form .form-group input::placeholder,
 .contact-form .form-group textarea::placeholder {
-  color: #999;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .contact-form .form-group input:focus,
 .contact-form .form-group textarea:focus {
   outline: none;
   border-color: var(--gold);
-  background: #fff;
 }
 
 .form-group textarea {
@@ -1194,16 +1193,16 @@ img { max-width: 100%; display: block; }
 .popup-input {
   width: 100%;
   padding: 14px 16px;
-  background: #f5f5f5;
-  border: 1px solid #ddd;
+  background: var(--dark-3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius);
-  color: #333;
+  color: var(--white);
   font-size: 14px;
   font-family: var(--font);
 }
 
-.popup-input::placeholder { color: #999; }
-.popup-input:focus { outline: none; border-color: var(--gold); background: #fff; }
+.popup-input::placeholder { color: rgba(255, 255, 255, 0.4); }
+.popup-input:focus { outline: none; border-color: var(--gold); }
 
 .popup-privacy {
   font-size: 11px;
