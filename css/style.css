@@ -228,7 +228,7 @@ img { max-width: 100%; display: block; }
 .hero-bg {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: url('../assets/hero-bg.png') center center / cover no-repeat fixed;
+  background: url('../assets/hero-bg.png') center center / cover no-repeat;
   z-index: 0;
 }
 
@@ -462,8 +462,8 @@ img { max-width: 100%; display: block; }
 .quiz-input {
   width: 100%;
   padding: 14px 16px;
-  background: #3a3a3a;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #444;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: var(--radius);
   color: var(--white);
   font-size: 15px;
@@ -981,8 +981,8 @@ img { max-width: 100%; display: block; }
 .contact-form .form-group textarea {
   width: 100%;
   padding: 14px 16px;
-  background: #3a3a3a;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #444;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: var(--radius);
   color: var(--white);
   font-size: 14px;
@@ -1193,8 +1193,8 @@ img { max-width: 100%; display: block; }
 .popup-input {
   width: 100%;
   padding: 14px 16px;
-  background: #3a3a3a;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #444;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: var(--radius);
   color: var(--white);
   font-size: 14px;
