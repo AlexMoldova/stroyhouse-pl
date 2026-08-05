@@ -606,6 +606,7 @@ img { max-width: 100%; display: block; }
 /* ───── Safety ───── */
 .safety-featured {
   display: flex;
+  flex-direction: column;
   gap: 0;
   background: var(--dark-2);
   border-radius: var(--radius);
@@ -614,21 +615,18 @@ img { max-width: 100%; display: block; }
   margin: 0 auto;
 }
 
-.safety-featured-image { flex: 1; }
+.safety-featured-image { width: 100%; }
 
 .safety-featured-image img {
   width: 100%;
-  height: 100%;
-  min-height: 400px;
+  height: 350px;
   object-fit: cover;
 }
 
 .safety-featured-body {
-  flex: 1;
   padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .safety-featured-body h3 {
@@ -693,7 +691,7 @@ img { max-width: 100%; display: block; }
 }
 
 .feature-card {
-  background: var(--dark-2);
+  background: transparent;
   border-radius: var(--radius);
   overflow: hidden;
   transition: 0.3s;
@@ -707,26 +705,30 @@ img { max-width: 100%; display: block; }
   width: 100%;
   height: 220px;
   object-fit: cover;
+  border-radius: var(--radius);
 }
 
 .feature-card h3 {
   font-size: 14px;
   font-weight: 700;
   color: var(--gold);
-  padding: 20px 20px 10px;
+  padding: 15px 0 8px;
   letter-spacing: 0.5px;
+  text-align: center;
 }
 
 .feature-card p {
   font-size: 13px;
   color: #b0b0b0;
-  padding: 0 20px 20px;
+  padding: 0 10px 10px;
   line-height: 1.55;
+  text-align: center;
 }
 
 /* ───── Works ───── */
 .works-featured {
   display: flex;
+  flex-direction: column;
   gap: 0;
   background: var(--dark-2);
   border-radius: var(--radius);
@@ -735,21 +737,18 @@ img { max-width: 100%; display: block; }
   margin: 0 auto;
 }
 
-.works-featured-image { flex: 1; }
+.works-featured-image { width: 100%; }
 
 .works-featured-image img {
   width: 100%;
-  height: 100%;
-  min-height: 350px;
+  height: 350px;
   object-fit: cover;
 }
 
 .works-featured-body {
-  flex: 1;
   padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .works-featured-body h3 {
@@ -1277,12 +1276,6 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 768px) {
-  .safety-featured, .works-featured {
-    flex-direction: column;
-  }
-  .safety-featured-image img, .works-featured-image img {
-    min-height: 250px;
-  }
   .hero-bg { background-attachment: scroll; }
   .hero-stats { flex-direction: column; align-items: center; }
   .hero-stat-box { width: 100%; max-width: 320px; }
