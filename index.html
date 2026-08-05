@@ -7,11 +7,12 @@
   <meta name="description" content="Produkcja i montaż schodów od ponad 30 lat. Własna produkcja, doświadczeni inżynierowie, gwarancja 3 lata.">
   <meta property="og:title" content="StroyHouse — schody od producenta w Warszawie i okolicach">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://46.225.63.145:8088/pl/">
+  <meta property="og:url" content="https://alexmoldova.github.io/stroyhouse-pl/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -30,20 +31,34 @@
       </a>
     </div>
     <button class="btn btn-callback" onclick="openPopup('callback')">Oddzwoń do mnie</button>
+    <button class="burger" id="burger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-link active" onclick="closeNav()">Schody</a>
+    <a href="#quiz" class="nav-link" onclick="closeNav()">Obliczyć koszt</a>
+    <a href="#features" class="nav-link" onclick="closeNav()">Zalety</a>
+    <a href="#works" class="nav-link" onclick="closeNav()">Zrealizowane prace</a>
+    <a href="#process" class="nav-link" onclick="closeNav()">Etapy prac</a>
+    <a href="#testimonials" class="nav-link" onclick="closeNav()">Opinie</a>
+    <a href="#contact" class="nav-link" onclick="closeNav()">Kontakt</a>
+  </div>
+</nav>
 
 <!-- ═══════════════ HERO ═══════════════ -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <div class="hero-container">
-    <p class="hero-intro">Zajmujemy się produkcją i montażem schodów od ponad 30 lat</p>
+    <p class="hero-subtitle-top">Po wyborze schodów otrzymasz kosztorys naprawy i kosztów materiałów</p>
+    <a href="#quiz" class="btn btn-hero-gold">Obliczyć koszt schodów</a>
     <h1 class="hero-title">WYBIERZ SCHODY DLA SWOJEGO DOMU</h1>
-    <p class="hero-subtitle">Po wyborze schodów otrzymasz kosztorys naprawy i kosztów materiałów</p>
+    <p class="hero-intro">Zajmujemy się produkcją i montażem schodów od ponad 30 lat</p>
     <div class="hero-line"></div>
-    <div class="hero-buttons">
-      <a href="#quiz" class="btn btn-gold">Obliczyć koszt schodów</a>
-    </div>
     <div class="hero-stats">
       <div class="hero-stat-box">
         <img src="assets/stat-stairs.png" alt="" class="hero-stat-icon">
@@ -69,7 +84,7 @@
   <div class="container">
     <h2 class="quiz-title">🪜 UZYSKAJ WYCENĘ<br>SWOICH SCHODÓW</h2>
     <p class="quiz-subtitle">Odpowiedz na kilka pytań — a przygotujemy dla Ciebie wstępny kosztorys</p>
-    
+
     <div class="quiz-container">
       <div class="quiz-step">
         <h3 class="quiz-step-title">🔹 Krok 1. Czego dokładnie potrzebujesz?</h3>
@@ -88,7 +103,7 @@
           </label>
         </div>
       </div>
-      
+
       <div class="quiz-step">
         <h3 class="quiz-step-title">🔹 Krok 2. Jaki kształt schodów jest planowany?</h3>
         <div class="quiz-options">
@@ -110,7 +125,7 @@
           </label>
         </div>
       </div>
-      
+
       <div class="quiz-step">
         <h3 class="quiz-step-title">🔹 Krok 3. Jakie drewno rozważasz?</h3>
         <div class="quiz-options">
@@ -132,7 +147,7 @@
           </label>
         </div>
       </div>
-      
+
       <div class="quiz-step">
         <h3 class="quiz-step-title">🔹 Krok 4. Jaki styl schodów Ci odpowiada?</h3>
         <div class="quiz-options">
@@ -146,7 +161,7 @@
           </label>
         </div>
       </div>
-      
+
       <div class="quiz-form">
         <input type="text" placeholder="Wpisz swoje imię" class="quiz-input" id="quiz-name">
         <input type="tel" placeholder="Wpisz swój telefon" class="quiz-input" id="quiz-phone">
@@ -158,11 +173,73 @@
   </div>
 </section>
 
+<!-- ═══════════════ STAIRS TYPES ═══════════════ -->
+<section class="section stairs-types" id="stairs-types">
+  <div class="container">
+    <div class="stairs-types-grid">
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type1.jpg" alt="Schody prosty bieg">
+        <div class="stairs-type-body">
+          <h3>Schody prosty bieg</h3>
+          <p class="stairs-price">Cena: <span>od 6 000 zł</span></p>
+          <p class="stairs-desc">Mimo prostoty nie do każdego domu pasuje taka konstrukcja. Wymaga długiego otworu</p>
+          <a href="#quiz" class="btn btn-gold btn-sm">Oceń moje schody</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type2.jpg" alt="Schody 90° z podestem">
+        <div class="stairs-type-body">
+          <h3>Schody 90° z podestem</h3>
+          <p class="stairs-price">Cena: <span>od 6 200 zł</span></p>
+          <p class="stairs-desc">Schody skrętne — najpopularniejsza konfiguracja</p>
+          <a href="#quiz" class="btn btn-gold btn-sm">Oceń moje schody</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type3.jpg" alt="Schody ze stopniami wachlarzowymi">
+        <div class="stairs-type-body">
+          <h3>Schody ze stopniami wachlarzowymi</h3>
+          <p class="stairs-price">Cena: <span>od 6 400 zł</span></p>
+          <p class="stairs-desc">Dla takich schodów wystarczy niewielki otwór</p>
+          <a href="#quiz" class="btn btn-gold btn-sm">Oceń moje schody</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type4.jpg" alt="Schody 180° ze stopniami wachlarzowymi">
+        <div class="stairs-type-body">
+          <h3>Schody 180° ze stopniami wachlarzowymi</h3>
+          <p class="stairs-price">Cena: <span>od 6 400 zł</span></p>
+          <p class="stairs-desc">Stopnie wachlarzowe sprawiają, że schody są wygodne i jednocześnie oszczędzają miejsce</p>
+          <a href="#quiz" class="btn btn-gold btn-sm">Oceń moje schody</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type5.jpg" alt="Schody reprezentacyjne">
+        <div class="stairs-type-body">
+          <h3>Schody reprezentacyjne</h3>
+          <p class="stairs-price">Cena: <span>od 7 700 zł</span></p>
+          <p class="stairs-desc">Takie schody staną się ozdobą każdego domu i zademonstrują wysoki status właściciela.</p>
+          <a href="#quiz" class="btn btn-gold btn-sm">Oceń moje schody</a>
+        </div>
+      </div>
+      <div class="stairs-type-card">
+        <img src="assets/stairs-type6.jpg" alt="Schody otwarte na metalowym szkieletcie">
+        <div class="stairs-type-body">
+          <h3>Schody otwarte na metalowym szkieletcie</h3>
+          <p class="stairs-price">Cena: <span>od 7 500 zł</span></p>
+          <p class="stairs-desc">Dla takich schodów wystarczy niewielki otwór</p>
+          <a href="#quiz" class="btn btn-gold btn-sm">Oceń moje schody</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════ SAFETY ═══════════════ -->
 <section class="section" id="about">
   <div class="container">
-    <p class="section-subtitle" style="margin-bottom: 20px;">Zadbamy o Twoje bezpieczeństwo</p>
-    <h2 class="section-title" style="font-size: 22px; margin-bottom: 30px;">ZAMÓW SOLIDNE SCHODY DO SWOJEGO DOMU</h2>
+    <p class="section-subtitle">Zadbamy o Twoje bezpieczeństwo</p>
+    <h2 class="section-title section-title-sm">ZAMÓW SOLIDNE SCHODY DO SWOJEGO DOMU</h2>
     <div class="safety-featured">
       <div class="safety-featured-image">
         <img src="assets/safety2.jpg" alt="">
@@ -245,6 +322,18 @@
         <span class="work-tag">Dom dwupoziomowy, woj. mazowieckie</span>
       </div>
     </div>
+
+    <!-- Gallery grid -->
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="assets/gallery1.jpg" alt=""></div>
+      <div class="gallery-item"><img src="assets/gallery2.jpg" alt=""></div>
+      <div class="gallery-item"><img src="assets/gallery3.jpg" alt=""></div>
+      <div class="gallery-item"><img src="assets/gallery4.jpg" alt=""></div>
+      <div class="gallery-item"><img src="assets/gallery5.jpg" alt=""></div>
+      <div class="gallery-item"><img src="assets/gallery6.jpg" alt=""></div>
+      <div class="gallery-item"><img src="assets/gallery7.jpg" alt=""></div>
+    </div>
+
     <div class="works-cta">
       <a href="#contact" class="btn btn-outline-gold">ZOBACZ PRZYKŁADY NASZYCH PRAC NA ŻYWO</a>
     </div>
