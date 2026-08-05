@@ -1291,7 +1291,11 @@ img { max-width: 100%; display: block; }
   .header-contact { display: flex; }
   .header-hours { display: none; }
   .header-phone { font-size: 14px; }
-  
+
+  .logo-text { display: none; }
+  .logo-img { width: 46px; height: 46px; }
+  .logo { gap: 0; }
+
   .nav {
     position: fixed;
     top: 56px;
@@ -1340,6 +1344,8 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 380px) {
+  .logo-text { display: none; }
+  .logo-img { width: 42px; height: 42px; }
   .hero { min-height: 920px; }
   .hero-title { font-size: 22px; }
   .hero-intro { font-size: 9px; }
