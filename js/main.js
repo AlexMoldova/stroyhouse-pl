@@ -5,41 +5,19 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ───── Header & Nav shrink on scroll ─────
+  // ───── Header shrink on scroll ─────
   const header = document.querySelector('.header');
-  const nav = document.querySelector('.nav');
   
   window.addEventListener('scroll', () => {
-    const current = window.scrollY;
-    if (current > 80) {
+    if (window.scrollY > 80) {
       header.classList.add('scrolled');
-      nav.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
-      nav.classList.remove('scrolled');
     }
   });
 
-  // ───── Active nav link on scroll ─────
+  // ───── Active section tracking (no nav, just scroll) ─────
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-  
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 150;
-      if (window.scrollY >= sectionTop) {
-        current = section.getAttribute('id');
-      }
-    });
-    
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
-      }
-    });
-  });
 
   // ───── Contact form submit ─────
   const form = document.querySelector('.contact-form');
